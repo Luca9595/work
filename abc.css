@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Helvetia";
-  src: url("./VAADIN/themes/custom/fonts/futura-std-book.woff") format("woff");
- }
+  src: url('../../../../VAADIN/themes/custom/fonts/futura-std-book.woff') format('woff');
+}
 
 /*GENERELL BODY*/
 
