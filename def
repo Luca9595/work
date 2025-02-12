@@ -1,0 +1,13 @@
+.v-loading-indicator {
+  /* Animated with delay to prevent flashing */
+  animation: fadein 0.3s ease-out 0.2s normal 1 both;
+}
+@keyframes fadein {
+  0% {
+    background: rgba(0,0,0,0);
+  }
+  100% {
+    background: rgba(0,0,0,.5); /* Darkens the UI */
+    pointer-events: auto;
+  }
+}
