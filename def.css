@@ -11,3 +11,10 @@
     pointer-events: auto;
   }
 }
+
+
+
+@font-face {
+  font-family: "Helvetia";
+  src: url("../../../../../universal/VAADIN/themes/custom/fonts/futura-std-book.woff") format("woff");
+ }
