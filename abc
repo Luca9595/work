@@ -1,0 +1,190 @@
+/*SCHRIFTART*/
+
+@font-face {
+  font-family: "Helvetia";
+  src: url("./VAADIN/themes/custom/fonts/futura-std-book.woff") format("woff");
+ }
+
+/*GENERELL BODY*/
+
+body {
+    --lumo-font-family: "Helvetia";
+    --lumo-primary-color: #00818f; /*dunkleres türkis von webseite*/
+    --lumo-primary-color-10pct: #cce6e9; /*tint of #00818f*/
+    --lumo-primary-color-20pct: rgba(231, 232, 233, 1);  /*hellstes Consor grau*/
+    --lumo-body-text-color: #00818f; /*dunkleres türkis*/
+    --lumo-header-text-color: #00818f;
+    --lumo-primary-contrast-color: #00818f; /*dunkleres türkis z.B. für Haken in Checkbox*/
+    --lumo-font-size-xs: 12px;
+    --lumo-font-size-s: 13.5px;
+    --lumo-font-size-m: 13.5px; /*nur für Warnung oder sonst noch etwas?*/
+    --loading-indicator-color: #b9eaf0; /*etwas heller und greller als #00818f*/
+    --menu-bar-item-color: #00818f; /*dunkleres türkis von webseite*/
+    --lumo-size-m: 30px; /*button size*/
+}
+
+
+/*LOGINSEITE*/
+
+/*Loginseite Hintergrundfarbe*/
+.uwp-login {
+  background: #005A64 !important;
+}
+
+/*Loginseite Hintergrund Logo*/
+.uwp-login-logo-container {
+    background-image: none !important; /*Consor-Muster entfernen*/
+}
+
+
+/*HEADER*/
+
+/* Startseite: Ersetzen des Images in der Menuleiste*/
+#header {
+  background-image: none !important; /*Consor-Muster entfernen*/
+  background-color: #ffffff !important;
+  }
+
+/* In einem GeVo: Ersetzen des Images in der Menuleiste*/
+#fastentry-header {
+  background-image: none !important; /*Consor-Muster entfernen*/
+  background-color: #ffffff;
+}
+
+#companyLogo {
+    mix-blend-mode: normal; /*Im Standard ändern?*/
+}
+
+/*BUTTONS*/
+
+.button.button__primary {
+  background-color: #46A9B4 !important; /*Hintergrundfarbe*/
+  color: #ffffff !important; /*Textfarbe in Button*/
+  font-size: 13.5px !important;
+}
+
+.button.button__primary:hover {
+  background-color: #006D73 !important;
+}
+
+.button.button__primary:disabled {
+    background-color: #e0e0e0 !important;
+}
+
+.button.button__secondary {
+    font-size: 13.5px !important;
+}
+
+[role=button] {
+    font-size: 13.5px;
+}
+/*INFO UND WARNMELDUNGEN*/
+
+/*Standardfeldbezeichnung ausblenden --> Standard oder Konfig?*/
+.sfc-WARNING {
+  -webkit-text-fill-color: transparent !important; /*Farbe vom Labeltext "WARNUNG"*/
+  width: 0px; /*damit Box ausgeblendet wird und Warnmeldetext linksbündig*/
+}
+
+/*Strich unter Warnung entfernen --> Standard oder Konfig?*/
+.column.form--column.sfc-WARNING {
+  border-bottom-color: transparent  !important; /*Farbe Underline der Warnmeldung anpassen*/
+}
+
+/*Für Warnungstext --> Standard oder Konfig?*/
+.sfc-WARNING.S_WARNING textarea {
+  -webkit-text-fill-color: #E1100A;
+  font-weight: bold !important;
+  padding-left: 0px;
+}
+
+/*Für Infotext --> Standard oder Konfig?*/
+.sfc-INFO.S_INFOMELDUNG textarea {
+  -webkit-text-fill-color: #0e46a1 !important;
+  font-weight: bold !important;
+  padding-left: 0px;
+}
+
+/*Standardfeldbezeichnung ausblenden --> Standard oder Konfig?*/
+.sfc-INFO {
+  -webkit-text-fill-color: transparent !important; /*Farbe vom Labeltext "INFO"*/
+  width: 0px; /*damit Box ausgeblendet wird und Infotext linksbÃ¼ndig*/
+}
+
+/*Strich unter Info entfernen --> Standard oder Konfig?*/
+.form--column.sfc-INFO {
+  border-bottom-color: transparent  !important; /*Farbe Underline der Infomeldung anpassen*/
+}
+
+/*Minimale Breite auf 0 gesetzt, damit Info und Warnmeldungen linksbündig möglich --> Standard oder Konfig?*/
+.form .form--row .form--column {
+  min-width: 0px !important;
+}
+
+/*Anpassung Spaltenbreite Warnmeldung, damit gesamte Länge genutzt wird bis zum Umbruch --> Standard oder Konfig?*/
+.column.form--column.column__grow.column__text_area.sfc-WARNING {
+  min-width: 850px !important;
+}
+
+/*Anpassung Spaltenbreite Infomeldung, damit gesamte Länge genutzt wird bis zum Umbruch --> Standard oder Konfig?*/
+.column.form--column.column__grow.column__text_area.sfc-INFO {
+  min-width: 850px !important;
+}
+
+/*BEARBEITUNGSBEREICH GEVO*/
+
+/*Gepunkteter Rahmen am Ende eines Abschnitts entfernen --> Standard oder Konfig?*/
+.row.top_container {
+  border-bottom: none;
+}
+
+/*Schriftgrössen und schwarze Titel --> Im Standard lumo-font-size verwenden anstatt hart codieren?*/
+
+label {
+    font-size: 13.5px;
+}
+
+.form .form--row .form--column .form--label, .form .form--row .form--column .form--message {
+    font-size: 13.5px;
+    padding-top: 10px; /*für Gevo Suche zweizeiliges Feld*/
+}
+
+vaadin-checkbox label {
+    font-size: 13.5px;
+}
+
+.form .level_2 .title {
+    font-size: 13.5px;
+}
+
+vaadin-grid-cell-content vaadin-grid-tree-toggle vaadin-horizontal-layout vaadin-horizontal-layout label
+{
+  font-size: 13.5px !important;
+}
+
+vaadin-grid vaadin-grid-cell-content vaadin-grid-sorter
+{
+   font-size: 13.5px;
+}
+ 
+vaadin-grid vaadin-grid-cell-content div div
+{
+   font-size: 13.5px;
+}
+
+vaadin-checkbox.title.title__medium label {
+    color: #141412;
+}
+
+.title.title__big {
+  color: #141412;
+}
+
+.title.title__medium {
+  color: #141412;
+}
+
+/*Titelgrösse an medium angleichen*/
+.title.title__small {
+  font-size: 15px;
+}
